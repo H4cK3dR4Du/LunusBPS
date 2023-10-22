@@ -1,7 +1,7 @@
-import os, concurrent.futures, time, threading, random, string, json, ctypes, sys
+import os, concurrent.futures, time, threading, random, string, json, ctypes, sys,platform
 
 try:
-    import requests, colorama, pystyle, datetime, aiosocks, asyncio, aiohttp_socks, socks, socket, tls_client,platform
+    import requests, colorama, pystyle, datetime, aiosocks, asyncio, aiohttp_socks, socks, socket, tls_client
 except ModuleNotFoundError:
     os.system("pip install requests")
     os.system("pip install colorama")
