@@ -1,4 +1,4 @@
-import os, concurrent.futures, time, threading, random, string, json, ctypes, sys
+import os, concurrent.futures, time, threading, random, string, json, ctypes, sys,platform
 
 try:
     import requests, colorama, pystyle, datetime, aiosocks, asyncio, aiohttp_socks, socks, socket, tls_client
@@ -52,14 +52,17 @@ def get_time_rn():
 
 def update_title():
     global https_scraped, socks4_scraped, socks5_scraped
-    ctypes.windll.kernel32.SetConsoleTitleW(f'[ LunusBPS ] By H4cK3dR4Du & 452b | HTTP/s Scraped : {https_scraped} ~ Socks4 Scraped : {socks4_scraped} ~ Socks5 Scraped : {socks5_scraped}')
+    if platform.system() == 'Windows':
+        ctypes.windll.kernel32.SetConsoleTitleW(f'[ LunusBPS ] By H4cK3dR4Du & 452b | HTTP/s Scraped : {https_scraped} ~ Socks4 Scraped : {socks4_scraped} ~ Socks5 Scraped : {socks5_scraped}')
 
 def update_title2():
     global https_scraped, socks4_scraped, socks5_scraped
-    ctypes.windll.kernel32.SetConsoleTitleW(f'[ LunusBPS ] By H4cK3dR4Du & 452b | HTTP/s Valid : {http_checked} ~ Socks4 Valid : {socks4_checked} ~ Socks5 Valid : {socks5_checked}')
+    if platform.system() == 'Windows':
+        ctypes.windll.kernel32.SetConsoleTitleW(f'[ LunusBPS ] By H4cK3dR4Du & 452b | HTTP/s Valid : {http_checked} ~ Socks4 Valid : {socks4_checked} ~ Socks5 Valid : {socks5_checked}')
 
 def ui():
-    ctypes.windll.kernel32.SetConsoleTitleW(f"[ LunusBPS ] By H4cK3dR4Du & 452b | Y'all love H4cK3dR4Du's and 452b's feds ❤️")
+    if platform.system() == 'Windows':
+        ctypes.windll.kernel32.SetConsoleTitleW(f"[ LunusBPS ] By H4cK3dR4Du & 452b | Y'all love H4cK3dR4Du's and 452b's feds ❤️")
     System.Clear()
     Write.Print(f"""
 \t\t888                                              888888b.   8888888b.   .d8888b.  
